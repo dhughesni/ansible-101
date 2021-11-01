@@ -1,7 +1,3 @@
-https://github.com/ansible/ansible
-https://www.ansible.com/
-https://linuxhint.com/ansible-tutorial-beginners/
-https://linuxhint.com/ansible-roles-tutorial/
 # What is Ansible?
 
 Ansible is a configuration management and orchestration tool. It works as an IT automation engine.
@@ -55,3 +51,10 @@ ok: [localhost] => {
 PLAY RECAP *****************************************************************************************************************************************************************************************************************************
 localhost                  : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
 ```
+
+# Ref
+- https://github.com/ansible/ansible
+- https://www.ansible.com/
+- https://linuxhint.com/ansible-tutorial-beginners/
+- https://linuxhint.com/ansible-roles-tutorial/
+- https://ansible-docs.readthedocs.io/zh/stable-2.0/rst/playbooks_filters.html
