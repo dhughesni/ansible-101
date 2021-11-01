@@ -1,0 +1,27 @@
+---
+- name: shuffle-list-playbook.yaml
+  hosts: localhost
+  vars:
+    somelist:
+    - t1
+    - t2
+    - t2
+    - t3
+    - t4
+  tasks:
+  - name: "loop through list"
+    debug:
+      msg: "An item: {{ item }}"
+    with_items:
+      - 1
+      - 2
+      - 3
+  - name: "loop through list from a variable and shuffle the list"
+    debug:
+      msg: "An item: {{ item }}"
+    # https://ansible-docs.readthedocs.io/zh/stable-2.0/rst/playbooks_filters.html#shuffle-filter
+    with_items: "{{ somelist | shuffle }}"
+  - name: "loop through list from a variable and oly print unique items"
+    debug:
+      msg: "An item: {{ item }}"
+    with_items: "{{ somelist | unique }}"

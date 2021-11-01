@@ -1,0 +1,13 @@
+---
+- name: example-playbook.yaml
+  hosts: localhost
+  tasks:
+    - name: pwd
+      command: pwd
+    - name: list files in folder
+      command: ls
+    - name: Debug msg
+      ansible.builtin.debug:
+        msg:
+        - "Debug msg 1"
+        - "Debug msg 2"
